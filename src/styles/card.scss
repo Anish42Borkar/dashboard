@@ -1,0 +1,54 @@
+@import "./variables.scss";
+.card {
+  width: fit-content;
+  border: 1px solid $grayscale-divider;
+  width: 15.3rem;
+  height: 7.9rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: $grayscale-white;
+
+  &:hover {
+    border-color: $main-blue;
+    .title,
+    .value {
+      color: $main-blue;
+    }
+  }
+
+  .title {
+    width: 10rem;
+    margin: 0rem auto;
+    margin-top: 1.3rem;
+    /* Bold/19px */
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.4px;
+
+    /* grayscale / gray */
+    color: $grayscale-gray;
+    // margin-top: 1rem;
+  }
+
+  .value {
+    width: 10rem;
+    margin: 0rem auto;
+    margin-top: 0.5rem;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 1px;
+
+    /* grayscale / black */
+
+    color: $grayscale-black;
+  }
+}

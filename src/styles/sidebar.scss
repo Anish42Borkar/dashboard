@@ -1,0 +1,89 @@
+@import "../styles/variables.scss";
+
+.sidebar {
+  margin-top: 3.2rem;
+  //   border-top: 1px solid yellow;
+  .main_link {
+    text-decoration: none;
+
+    &:hover {
+      //   color: red;
+      .link_cont {
+        .icon {
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+        .text {
+          color: $main-lightBlue;
+        }
+      }
+    }
+
+    &.active {
+      .link_cont {
+        position: relative;
+        &::before {
+          position: absolute;
+          content: "";
+          background-color: $main-lightBlue;
+          width: 0.2rem;
+          height: 100%;
+          top: 0;
+          left: 0;
+        }
+
+        background-color: rgba(164, 166, 179, 0.08);
+        .text {
+          color: $main-lightBlue;
+        }
+      }
+      .icon {
+        img {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+
+    .link_cont {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      align-items: cenetr;
+      padding: 1rem 0.5rem;
+
+      .icon {
+        width: 0.9rem;
+        img {
+          width: 100%;
+        }
+      }
+
+      .text {
+        // border: 1px solid red;
+        width: 9rem;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        /* identical to box height */
+        letter-spacing: 0.2px;
+        padding-left: 0.45rem;
+
+        /* Main/LightBlue */
+
+        color: $sidebar-gray;
+      }
+    }
+  }
+  .divider {
+    height: 1px;
+    background-color: $grayscale-divider;
+    margin-top: 0.9rem;
+    opacity: 0.08;
+  }
+
+  .more_links {
+    margin-top: 1rem;
+  }
+}

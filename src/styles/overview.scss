@@ -1,0 +1,398 @@
+@import "./variables.scss";
+.overview {
+  .section_card {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1.579rem;
+  }
+
+  .section_chart {
+    display: grid;
+    grid-template-columns: auto 20.2rem;
+    margin-top: 1.7rem;
+    border-radius: 8px;
+
+    background-color: $grayscale-white;
+    .left {
+      border: 1px solid $grayscale-divider;
+      border-radius: 8px 0px 0px 8px;
+      border-right: none;
+
+      padding: 0rem 1.9rem;
+      padding-top: 1.9rem;
+      .todays_trend {
+        display: flex;
+        flex-direction: column;
+        .text {
+          /* Bold/19px */
+
+          font-style: normal;
+          font-weight: 700;
+          font-size: 19px;
+          line-height: 24px;
+          /* identical to box height */
+
+          letter-spacing: 0.4px;
+
+          /* grayscale / black */
+
+          color: $grayscale-black;
+        }
+        .todays_trend_details {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 0.26rem;
+          .date_stamp {
+            /* Regular/12px */
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            /* identical to box height, or 133% */
+
+            letter-spacing: 0.1px;
+
+            /* grayscale / gray */
+
+            color: $grayscale-gray;
+          }
+          .chart_legends {
+            display: flex;
+            gap: 2rem;
+            .legend > p {
+              /* SemiBold/12px */
+              font-style: normal;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 15px;
+              letter-spacing: 0.1px;
+              position: relative;
+              /* grayscale / gray */
+
+              &::before {
+                content: "";
+                position: absolute;
+                width: 1rem;
+                height: 0.1rem;
+                top: 50%;
+                left: -1.4rem;
+                transform: translateY(-50%);
+              }
+
+              color: $grayscale-gray;
+            }
+            .legend {
+              &:first-child {
+                margin-right: 1rem;
+              }
+            }
+
+            .legend {
+              .today::before {
+                background-color: $main-blue;
+              }
+              .yesterday::before {
+                background-color: $grayscale-divider;
+              }
+            }
+          }
+        }
+      }
+
+      .trend_chart {
+        height: 26rem;
+        width: auto;
+        // background-color: pink;
+        // width: 19rem;
+      }
+    }
+    .right {
+      overflow: hidden;
+
+      .chart_card {
+        height: 6.8rem;
+
+        border: 1px solid $grayscale-divider;
+
+        &:first-child {
+          border-top-right-radius: 8px;
+        }
+        &:nth-child(n + 2) {
+          margin-top: -1px;
+          height: 6.3rem;
+        }
+        .chart_title {
+          /* SemiBold/16px */
+
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 22px;
+          /* identical to box height, or 138% */
+
+          text-align: center;
+          letter-spacing: 0.3px;
+
+          /* grayscale / gray */
+
+          color: $grayscale-gray;
+          margin-top: 1.8rem;
+        }
+      }
+
+      .chart_value {
+        /* Bold/24px */
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: 0.3px;
+
+        /* grayscale / black */
+
+        color: $grayscale-black;
+        margin-top: 0.3rem;
+      }
+      // background-color: yellow;
+    }
+  }
+  .secton3 {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.7rem;
+    & > div {
+      width: 32.1rem;
+      height: 19.8rem;
+      background-color: $grayscale-white;
+      border: 1px solid $grayscale-divider;
+      border-radius: 8px;
+    }
+    .common {
+      .header_cont {
+        padding: 0rem 1.9rem;
+        padding-top: 2rem;
+        .header {
+          display: flex;
+          justify-content: space-between;
+          .title {
+            /* Bold/19px */
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 19px;
+            line-height: 24px;
+            /* identical to box height */
+
+            letter-spacing: 0.4px;
+
+            /* grayscale / black */
+
+            color: $grayscale-black;
+          }
+          .details {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            text-align: right;
+            letter-spacing: 0.2px;
+
+            /* Main/Blue */
+
+            color: $main-blue;
+            cursor: pointer;
+          }
+        }
+        .group {
+          /* Reg 12 (0.1 px) */
+
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          /* identical to box height, or 133% */
+
+          letter-spacing: 0.1px;
+
+          /* grayscale / gray */
+
+          color: $grayscale-gray;
+          margin-top: 0.4rem;
+          span {
+            color: $grayscale-black;
+          }
+        }
+      }
+    }
+    .unresolved_tickets {
+      .starus_cont {
+        margin-top: 0.9rem;
+        .status_details {
+          border-bottom: 1px solid $grayscale-divider;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 1rem 1.6rem;
+          &:nth-child(n + 2) {
+            margin-top: -1px;
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          & > :nth-child(1) {
+            /* SemiBold/14px */
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            letter-spacing: 0.2px;
+
+            /* grayscale / black */
+
+            color: $grayscale-black;
+          }
+          & > :nth-child(2) {
+            /* SemiBold/14px */
+
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            /* identical to box height, or 143% */
+
+            text-align: right;
+            letter-spacing: 0.2px;
+
+            /* grayscale / gray */
+
+            color: $grayscale-gray;
+          }
+        }
+      }
+    }
+
+    .tasks {
+      .add_task_cont {
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem 1.9rem;
+        margin-top: 1.89rem;
+        & > :first-child {
+          /* SemiBold/14px */
+
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 20px;
+          /* identical to box height, or 143% */
+
+          letter-spacing: 0.2px;
+
+          /* grayscale / gray light */
+
+          color: $grayscale-graylight;
+        }
+      }
+      .checkbox_cont {
+        margin-top: 0.7rem;
+        .checkbox {
+          border-top: 1px solid $grayscale-divider;
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem 1.6rem;
+
+          & > :last-child {
+            padding: 0.3rem 0.6rem;
+            border-radius: 8px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 11px;
+            line-height: 14px;
+            /* identical to box height */
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+
+            /* grayscale / white */
+
+            color: $grayscale-white;
+          }
+          & > :last-child.yellow {
+            background-color: $yellow-default;
+          }
+          & > :last-child.green {
+            background-color: $green-default;
+          }
+          & > :last-child.default {
+            color: $grayscale-gray;
+            background-color: $grayscale-graylightest;
+          }
+          .group {
+            & > input[type="checkbox"] {
+              display: none;
+            }
+
+            & > input[type="checkbox"]:checked + .label::before {
+              display: block;
+            }
+            .label {
+              /* SemiBold/14px */
+
+              font-style: normal;
+              font-weight: 600;
+              font-size: 14px;
+              line-height: 20px;
+              /* identical to box height, or 143% */
+              padding-left: 2.4rem;
+
+              letter-spacing: 0.2px;
+
+              /* grayscale / black */
+
+              color: $grayscale-black;
+              position: relative;
+
+              &::before {
+                content: "";
+                background: url("../assets/icons/tick.svg");
+                background-position: center;
+                background-size: contain;
+                width: 1rem;
+                height: 1rem;
+                top: 50%;
+                left: 0.3rem;
+                transform: translateY(-50%);
+                position: absolute;
+                display: none;
+              }
+
+              &::after {
+                content: "";
+
+                border: 1px solid $grayscale-graylight;
+                border-radius: 100%;
+                width: 1rem;
+                height: 1rem;
+                top: 50%;
+                left: 0.29rem;
+                transform: translateY(-50%);
+                position: absolute;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

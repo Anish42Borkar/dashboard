@@ -1,0 +1,38 @@
+@import "./variables.scss";
+.dashbaord {
+  display: grid;
+  grid-template-columns: 17.72% auto;
+
+  .dashbaord_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 2.21rem;
+    .img_cont {
+      width: 1.84rem;
+      object-fit: contain;
+    }
+    .dashbaord_img {
+      width: 100%;
+    }
+
+    .dashbaord_header {
+      /* Bold/19px */
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+      text-align: center;
+      letter-spacing: 0.4px;
+      /* sidebar / gray */
+      color: $sidebar-gray;
+      opacity: 0.7;
+    }
+  }
+
+  .outlet_cont {
+    background-color: $grayscale;
+    padding: 2rem 1.415rem;
+  }
+}

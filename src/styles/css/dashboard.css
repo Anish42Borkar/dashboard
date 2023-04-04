@@ -1,0 +1,10 @@
+.dashbaord {
+  display: grid;
+  grid-template-columns: 15rem 69.43rem;
+}
+.dashbaord .sidebar_cont {
+  margin-left: 2rem;
+}
+.dashbaord .outlet_cont {
+  background-color: white;
+}/*# sourceMappingURL=dashboard.css.map */

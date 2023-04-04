@@ -1,0 +1,52 @@
+@import "./variables.scss";
+.pagination {
+  margin-top: 1rem;
+  text-align: right;
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .row_controler,
+  .page_indicator {
+    & > * {
+      /* Regular/14px */
+      vertical-align: middle;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      /* or 143% */
+
+      letter-spacing: 0.3px;
+
+      /* grayscale / gray */
+
+      color: $grayscale-gray;
+    }
+  }
+  .row_controler {
+    margin-right: 3.5rem;
+    & > select {
+      outline: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      font-weight: 700;
+      color: $grayscale-gray-dark;
+      margin-left: 0.3rem;
+    }
+  }
+  .page_indicator {
+    margin-right: 1.7rem;
+  }
+
+  .page_controler {
+    margin-right: 2.5rem;
+    & > :first-child {
+      margin-right: 1.7rem;
+    }
+    & > img {
+      cursor: pointer;
+    }
+  }
+}
