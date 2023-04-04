@@ -1,3 +1,3 @@
 # dashboard
 
-# https://job-openings.netlify.app/
+# https://dashboard-modern.netlify.app/
